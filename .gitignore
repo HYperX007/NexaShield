@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+*/venv/
+
+# Environment variables
+.env
+backend/.env
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Python generated files
+*.log
+
+# Model files
+*.pt
+*.onnx
+
+# Dataset files
+data/raw/
+data/archive/
+
+# Temporary audio
+*.wav
+*.webm
+*.mp3
+*.flac
+*.ogg
+*.m4a
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Training artifacts
+data/processed/*/X.npy
+data/processed/*/y.npy
+
+# Local ML experiments/archive
+ml/archive/
