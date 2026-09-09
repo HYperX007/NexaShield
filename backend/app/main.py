@@ -43,13 +43,15 @@ app.add_middleware(
 # FFMPEG CONFIGURATION
 # =========================================
 
-FFMPEG_PATH = os.getenv("FFMPEG_PATH")
+FFMPEG_PATH = os.getenv("FFMPEG_PATH", "ffmpeg")
 
-if not FFMPEG_PATH or not os.path.exists(FFMPEG_PATH):
+if not os.path.isabs(FFMPEG_PATH):
+    FFMPEG_PATH = shutil.which(FFMPEG_PATH) or FFMPEG_PATH
+
+if not os.path.exists(FFMPEG_PATH) and FFMPEG_PATH != "ffmpeg":
     raise RuntimeError(
         "FFMPEG_PATH is not configured correctly."
     )
-
 
 # =========================================
 # PROJECT PATH
