@@ -50,3 +50,7 @@ data/processed/*/y.npy
 
 # Local ML experiments/archive
 ml/archive/
+
+# NexaShield presentation demo samples
+!backend/demo_samples/
+!backend/demo_samples/*.wav

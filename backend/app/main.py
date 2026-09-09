@@ -32,7 +32,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://nexashield-ai.onrender.com",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -68,9 +71,8 @@ PROJECT_ROOT = os.path.abspath(
 
 DEMO_AUDIO_DIR = os.path.join(
     PROJECT_ROOT,
-    "data",
-    "test",
-    "real_samples"
+    "backend",
+    "demo_samples"
 )
 
 
