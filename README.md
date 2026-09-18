@@ -8,6 +8,18 @@ NexaShield AI is a full-stack research/prototype project that analyzes spoken au
 
 The current application is designed around this pipeline:
 
+```mermaid
+flowchart TD
+    A[Audio upload / demo] --> B[FFmpeg conversion]
+    B --> C[Voice activity check]
+    C --> D[Multi-window analysis]
+    D --> E[Mel-spectrogram]
+    E --> F[PyTorch Voice CNN]
+    F --> G[Synthetic probability]
+    G --> H[Risk engine]
+    H --> I[Verdict + recommendation]
+```
+
 ```text
 Audio Upload / Demo Sample
           ↓
@@ -106,7 +118,7 @@ NexaShield is organized into separate frontend, backend, and ML-oriented compone
 └──────────────────────┘
 ```
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for more detail.
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the detailed architecture and [docs/MODEL_NOTES.md](docs/MODEL_NOTES.md) for model/evaluation notes.
 
 ## 📁 Repository Structure
 
